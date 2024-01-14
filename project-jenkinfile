@@ -2,7 +2,7 @@ pipeline{
     agent any
     tools{
         maven 'maven'
-        Docker 'Docker'
+        dockerTool 'Docker'
     }
     environment{
         SCM='https://github.com/ChineduOkeke/web-app.git'
