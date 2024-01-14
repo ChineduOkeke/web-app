@@ -20,3 +20,11 @@ pipeline{
                   sh 'mvn package'
             }
         }
+        stage('Deploying to Tomcat with Dockerhub'){
+            steps{
+                echo 'Depoying application to Tomcat'
+                sh 'docker build -t project .'
+            }
+        }
+    }
+}
